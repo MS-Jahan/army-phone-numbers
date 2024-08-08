@@ -73,6 +73,7 @@ const App = () => {
         return distanceA - distanceB;
       }
       return 0;
+      
     });
   }, [filteredData, latitude, longitude]);
 
@@ -95,7 +96,7 @@ const App = () => {
         rel="noopener noreferrer"
         className="absolute top-4 right-4"
       >
-        <img src={GitHubLogo} alt="GitHub Repo" className="w-10 h-10" />
+        <img src="/github-logo.svg" alt="GitHub Repo" className="w-10 h-10" />
       </a>
     </div>
   );

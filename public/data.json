@@ -1,622 +1,806 @@
 [
   {
-    "englishName": "Barishal",
-    "banglaName": "বরিশাল",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769072556", "01769072456"]
+      "englishName": "Barishal",
+      "banglaName": "বরিশাল",
+      "location": {
+          "latitude": "22.78038205",
+          "longitude": "90.30618860167021"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769072556",
+          "01769072456"
+      ]
   },
   {
-    "englishName": "Patuakhali",
-    "banglaName": "পটুয়াখালী",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769073120", "01769073122"]
+      "englishName": "Patuakhali",
+      "banglaName": "পটুয়াখালী",
+      "location": {
+          "latitude": "22.46457315",
+          "longitude": "90.38812170767491"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769073120",
+          "01769073122"
+      ]
   },
   {
-    "englishName": "Jhalokathi",
-    "banglaName": "ঝালকাঠি",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769072108", "01769072122"]
+      "englishName": "Jhalokathi",
+      "banglaName": "ঝালকাঠি",
+      "location": {
+          "latitude": "22.660561350000002",
+          "longitude": "90.1954498985531"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769072108",
+          "01769072122"
+      ]
   },
   {
-    "englishName": "Pirojpur",
-    "banglaName": "পিরোজপুর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769078298", "01769078308"]
+      "englishName": "Pirojpur",
+      "banglaName": "পিরোজপুর",
+      "location": {
+          "latitude": "22.5785847",
+          "longitude": "89.9692183"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769078298",
+          "01769078308"
+      ]
   },
   {
-    "englishName": "Noakhali",
-    "banglaName": "নোয়াখালী",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769331519", "01769331520"]
+      "englishName": "Noakhali",
+      "banglaName": "নোয়াখালী",
+      "location": {
+          "latitude": "22.8741068",
+          "longitude": "91.0967316"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769331519",
+          "01769331520"
+      ]
   },
   {
-    "englishName": "Chandpur",
-    "banglaName": "চাঁদপুর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01815440543", "01568734976"]
+      "englishName": "Chandpur",
+      "banglaName": "চাঁদপুর",
+      "location": {
+          "latitude": "23.2309202",
+          "longitude": "90.6430506"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01815440543",
+          "01568734976"
+      ]
   },
   {
-    "englishName": "Feni",
-    "banglaName": "ফেনী",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769335461", "01769335434"]
+      "englishName": "Feni",
+      "banglaName": "ফেনী",
+      "location": {
+          "latitude": "23.011943",
+          "longitude": "91.3574901"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769335461",
+          "01769335434"
+      ]
   },
   {
-    "englishName": "Lakshmipur",
-    "banglaName": "লক্ষীপুর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01721821096", "01708762110"]
+      "englishName": "Lakshmipur",
+      "banglaName": "লক্ষীপুর",
+      "location": {
+          "latitude": "22.8723926",
+          "longitude": "90.4955673"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01721821096",
+          "01708762110"
+      ]
   },
   {
-    "englishName": "Cumilla",
-    "banglaName": "কুমিল্লা",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01334616159", "01334616160"]
+      "englishName": "Cumilla",
+      "banglaName": "কুমিল্লা",
+      "location": {
+          "latitude": "23.4610615",
+          "longitude": "91.1808748"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01334616159",
+          "01334616160"
+      ]
   },
   {
-    "englishName": "Brahmanbaria",
-    "banglaName": "ব্রাক্ষণবাড়ীয়া",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769322491", "01769332609"]
+      "englishName": "Brahmanbaria",
+      "banglaName": "ব্রাক্ষণবাড়ীয়া",
+      "location": {
+          "latitude": "23.9916227",
+          "longitude": "91.0618509"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769322491",
+          "01769332609"
+      ]
   },
   {
-    "englishName": "Cox's Bazar",
-    "banglaName": "কক্সবাজার",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "কক্সবাজার এবং চট্টগ্রাম জেলার লোহাগড়া, পটিয়া, চন্দনাইশ, বাঁশখালী এবং সাতকানিয়া উপজেলা",
-    "phoneNumbers": ["01769107231", "01769107232"]
+      "englishName": "Cox's Bazar",
+      "banglaName": "কক্সবাজার",
+      "location": {
+          "latitude": "21.473260449999998",
+          "longitude": "91.96896729763154"
+      },
+      "description": "কক্সবাজার এবং চট্টগ্রাম জেলার লোহাগড়া, পটিয়া, চন্দনাইশ, বাঁশখালী এবং সাতকানিয়া উপজেলা",
+      "phoneNumbers": [
+          "01769107231",
+          "01769107232"
+      ]
   },
   {
-    "englishName": "Chattogram",
-    "banglaName": "চট্টগ্রাম",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "চট্টগ্রাম (লোহাগড়া, পটিয়া, চন্দনাইশ, বাঁশখালী এবং সাতকানিয়া উপজেলা ব্যতিত)",
-    "phoneNumbers": ["01769242012", "01769242014"]
+      "englishName": "Chattogram",
+      "banglaName": "চট্টগ্রাম",
+      "location": {
+          "latitude": "22.3703021",
+          "longitude": "91.76930192681658"
+      },
+      "description": "চট্টগ্রাম (লোহাগড়া, পটিয়া, চন্দনাইশ, বাঁশখালী এবং সাতকানিয়া উপজেলা ব্যতিত)",
+      "phoneNumbers": [
+          "01769242012",
+          "01769242014"
+      ]
   },
   {
-    "englishName": "Madaripur",
-    "banglaName": "মাদারীপুর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769072102", "01769072103"]
+      "englishName": "Madaripur",
+      "banglaName": "মাদারীপুর",
+      "location": {
+          "latitude": "23.1608156",
+          "longitude": "90.1608578"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769072102",
+          "01769072103"
+      ]
   },
   {
-    "englishName": "Kishoreganj",
-    "banglaName": "কিশোরগঞ্জ",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769192382", "01769202366"]
+      "englishName": "Kishoreganj",
+      "banglaName": "কিশোরগঞ্জ",
+      "location": {
+          "latitude": "24.4427153",
+          "longitude": "90.7632118"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769192382",
+          "01769202366"
+      ]
   },
   {
-    "englishName": "Tangail",
-    "banglaName": "টাঙ্গাইল",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769212651", "01769210870"]
+      "englishName": "Tangail",
+      "banglaName": "টাঙ্গাইল",
+      "location": {
+          "latitude": "24.2738464",
+          "longitude": "89.9377198"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769212651",
+          "01769210870"
+      ]
   },
   {
-    "englishName": "Gopalganj",
-    "banglaName": "গোপালগঞ্জ",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769552436", "01769552448"]
+      "englishName": "Gopalganj",
+      "banglaName": "গোপালগঞ্জ",
+      "location": {
+          "latitude": "23.03408",
+          "longitude": "89.8401059"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769552436",
+          "01769552448"
+      ]
   },
   {
-    "englishName": "Rajbari",
-    "banglaName": "রাজবাড়ী",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769552514", "01769552528"]
+      "englishName": "Rajbari",
+      "banglaName": "রাজবাড়ী",
+      "location": {
+          "latitude": "23.7206703",
+          "longitude": "89.6222994"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769552514",
+          "01769552528"
+      ]
   },
   {
-    "englishName": "Gazipur",
-    "banglaName": "গাজীপুর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01785349842", "01769092106"]
+      "englishName": "Gazipur",
+      "banglaName": "গাজীপুর",
+      "location": {
+          "latitude": "23.991678049999997",
+          "longitude": "90.3388475"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01785349842",
+          "01769092106"
+      ]
   },
   {
-    "englishName": "Munshiganj",
-    "banglaName": "মুন্সিগঞ্জ",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769082798", "01769082784"]
+      "englishName": "Munshiganj",
+      "banglaName": "মুন্সিগঞ্জ",
+      "location": {
+          "latitude": "23.5452292",
+          "longitude": "90.4815476"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769082798",
+          "01769082784"
+      ]
   },
   {
-    "englishName": "Manikganj",
-    "banglaName": "মানিকগঞ্জ",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769092540", "01769092542"]
+      "englishName": "Manikganj",
+      "banglaName": "মানিকগঞ্জ",
+      "location": {
+          "latitude": "23.8706167",
+          "longitude": "89.9986742"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769092540",
+          "01769092542"
+      ]
   },
   {
-    "englishName": "Narayanganj",
-    "banglaName": "নারায়ণগঞ্জ",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01732051858"]
+      "englishName": "Narayanganj",
+      "banglaName": "নারায়ণগঞ্জ",
+      "location": {
+          "latitude": "23.63362015",
+          "longitude": "90.49688227272468"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01732051858"
+      ]
   },
   {
-    "englishName": "Narsingdi",
-    "banglaName": "নরসিংদী",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769082766", "01769082778"]
+      "englishName": "Narsingdi",
+      "banglaName": "নরসিংদী",
+      "location": {
+          "latitude": "23.9308715",
+          "longitude": "90.7159738"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769082766",
+          "01769082778"
+      ]
   },
   {
-    "englishName": "Shariatpur",
-    "banglaName": "শরিয়তপুর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769097660", "01769097655"]
+      "englishName": "Shariatpur",
+      "banglaName": "শরিয়তপুর",
+      "location": {
+          "latitude": "23.2132841",
+          "longitude": "90.3481247"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769097660",
+          "01769097655"
+      ]
   },
   {
-    "englishName": "Faridpur",
-    "banglaName": "ফরিদপুর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769092102", "01742966162"]
+      "englishName": "Faridpur",
+      "banglaName": "ফরিদপুর",
+      "location": {
+          "latitude": "23.575581",
+          "longitude": "89.8464641"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769092102",
+          "01742966162"
+      ]
   },
   {
-    "englishName": "Dhaka",
-    "banglaName": "ঢাকা",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "ঢাকার লালবাগ, ধানমন্ডি, মোহাম্মদপুর, শ্যামলী, আগারগাঁও, মহাখালী, তেজগাঁও, এ্যালিফেন্ট রোড এবং কাঁটাবন",
-    "phoneNumbers": ["01769051838", "01769051839"]
+      "englishName": "Dhaka",
+      "banglaName": "ঢাকা",
+      "location": {
+          "latitude": "23.8202931",
+          "longitude": "90.3710408"
+      },
+      "description": "ঢাকার লালবাগ, ধানমন্ডি, মোহাম্মদপুর, শ্যামলী, আগারগাঁও, মহাখালী, তেজগাঁও, এ্যালিফেন্ট রোড এবং কাঁটাবন",
+      "phoneNumbers": [
+          "01769051838",
+          "01769051839"
+      ]
   },
   {
-    "englishName": "Dhaka",
-    "banglaName": "ঢাকা",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "ঢাকার গুলশান, বারিধারা, বনানী, বসুন্ধরা, বাড্ডা, রামপুরা, শাহজাহানপুর, উত্তরখান, দক্ষিণখান এবং বনশ্রী",
-    "phoneNumbers": ["01769013102", "01769053154"]
+      "englishName": "Dhaka",
+      "banglaName": "ঢাকা",
+      "location": {
+          "latitude": "23.8202931",
+          "longitude": "90.3710408"
+      },
+      "description": "ঢাকার গুলশান, বারিধারা, বনানী, বসুন্ধরা, বাড্ডা, রামপুরা, শাহজাহানপুর, উত্তরখান, দক্ষিণখান এবং বনশ্রী",
+      "phoneNumbers": [
+          "01769013102",
+          "01769053154"
+      ]
   },
   {
-    "englishName": "Dhaka",
-    "banglaName": "ঢাকা",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "ঢাকার মিরপুর-১ হতে মিরপুর-১৪, খিলক্ষেত, উত্তরা এবং হযরত শাহজালাল আন্তর্জাতিক বিমান বন্দর",
-    "phoneNumbers": ["01769024210", "01769024211"]
+      "englishName": "Dhaka",
+      "banglaName": "ঢাকা",
+      "location": {
+          "latitude": "23.8202931",
+          "longitude": "90.3710408"
+      },
+      "description": "ঢাকার মিরপুর-১ হতে মিরপুর-১৪, খিলক্ষেত, উত্তরা এবং হযরত শাহজালাল আন্তর্জাতিক বিমান বন্দর",
+      "phoneNumbers": [
+          "01769024210",
+          "01769024211"
+      ]
   },
   {
-    "englishName": "Dhaka",
-    "banglaName": "ঢাকা",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "ঢাকার মতিঝিল, সেগুনবাগিচা, কাকরাইল, শান্তিনগর, ইস্কাটন, রাজারবাগ, পল্টন, গুলিস্তান এবং পুরান ঢাকা",
-    "phoneNumbers": ["01769092428", "01769095419"]
+      "englishName": "Dhaka",
+      "banglaName": "ঢাকা",
+      "location": {
+          "latitude": "23.8202931",
+          "longitude": "90.3710408"
+      },
+      "description": "ঢাকার মতিঝিল, সেগুনবাগিচা, কাকরাইল, শান্তিনগর, ইস্কাটন, রাজারবাগ, পল্টন, গুলিস্তান এবং পুরান ঢাকা",
+      "phoneNumbers": [
+          "01769092428",
+          "01769095419"
+      ]
   },
   {
-    "englishName": "Sherpur",
-    "banglaName": "শেরপুর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769202516", "01769202524"]
+      "englishName": "Sherpur",
+      "banglaName": "শেরপুর",
+      "location": {
+          "latitude": "25.0360647",
+          "longitude": "90.0139029"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769202516",
+          "01769202524"
+      ]
   },
   {
-    "englishName": "Netrokona",
-    "banglaName": "নেত্রকোণা",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769202478", "01769202448"]
+      "englishName": "Netrokona",
+      "banglaName": "নেত্রকোণা",
+      "location": {
+          "latitude": "24.89156685",
+          "longitude": "90.71253264209183"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769202478",
+          "01769202448"
+      ]
   },
   {
-    "englishName": "Jamalpur",
-    "banglaName": "জামালপুর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769192545", "01769192550"]
+      "englishName": "Jamalpur",
+      "banglaName": "জামালপুর",
+      "location": {
+          "latitude": "24.90016675",
+          "longitude": "89.98989331040148"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769192545",
+          "01769192550"
+      ]
   },
   {
-    "englishName": "Mymensingh",
-    "banglaName": "ময়মনসিংহ",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769208151", "01769208165"]
+      "englishName": "Mymensingh",
+      "banglaName": "ময়মনসিংহ",
+      "location": {
+          "latitude": "24.74611",
+          "longitude": "90.40391029265447"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769208151",
+          "01769208165"
+      ]
   },
   {
-    "englishName": "Bagerhat",
-    "banglaName": "বাগেরহাট",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769072514", "01769072536"]
+      "englishName": "Bagerhat",
+      "banglaName": "বাগেরহাট",
+      "location": {
+          "latitude": "22.6600977",
+          "longitude": "89.7859958"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769072514",
+          "01769072536"
+      ]
   },
   {
-    "englishName": "Kushtia",
-    "banglaName": "কুষ্টিয়া",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769552362", "01769552366"]
+      "englishName": "Kushtia",
+      "banglaName": "কুষ্টিয়া",
+      "location": {
+          "latitude": "23.8987955",
+          "longitude": "89.1295536"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769552362",
+          "01769552366"
+      ]
   },
   {
-    "englishName": "Chuadanga",
-    "banglaName": "চুয়াডাঙ্গা",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769552380", "01769552382"]
+      "englishName": "Chuadanga",
+      "banglaName": "চুয়াডাঙ্গা",
+      "location": {
+          "latitude": "23.6380381",
+          "longitude": "88.8546283"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769552380",
+          "01769552382"
+      ]
   },
   {
-    "englishName": "Meherpur",
-    "banglaName": "মেহেরপুর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769552398", "02479921153"]
+      "englishName": "Meherpur",
+      "banglaName": "মেহেরপুর",
+      "location": {
+          "latitude": "23.77802545",
+          "longitude": "88.63841832488058"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769552398",
+          "02479921153"
+      ]
   },
   {
-    "englishName": "Narail",
-    "banglaName": "নড়াইল",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769552456", "01769552457"]
+      "englishName": "Narail",
+      "banglaName": "নড়াইল",
+      "location": {
+          "latitude": "23.17368665",
+          "longitude": "89.50151812379154"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769552456",
+          "01769552457"
+      ]
   },
   {
-    "englishName": "Magura",
-    "banglaName": "মাগুরা",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769554505", "01769554506"]
+      "englishName": "Magura",
+      "banglaName": "মাগুরা",
+      "location": {
+          "latitude": "23.4860159",
+          "longitude": "89.4241349"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769554505",
+          "01769554506"
+      ]
   },
   {
-    "englishName": "Jhenaidah",
-    "banglaName": "ঝিনাইদহ",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769552158", "01769552172"]
+      "englishName": "Jhenaidah",
+      "banglaName": "ঝিনাইদহ",
+      "location": {
+          "latitude": "23.56696655",
+          "longitude": "89.17758169831568"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769552158",
+          "01769552172"
+      ]
   },
   {
-    "englishName": "Jashore",
-    "banglaName": "যশোর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769552610", "01769009245"]
+      "englishName": "Jashore",
+      "banglaName": "যশোর",
+      "location": {
+          "latitude": "23.1288728",
+          "longitude": "89.32820560898868"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769552610",
+          "01769009245"
+      ]
   },
   {
-    "englishName": "Khulna",
-    "banglaName": "খুলনা",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769552616", "01769552618"]
+      "englishName": "Khulna",
+      "banglaName": "খুলনা",
+      "location": {
+          "latitude": "22.801444449999998",
+          "longitude": "89.53423658653729"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769552616",
+          "01769552618"
+      ]
   },
   {
-    "englishName": "Satkhira",
-    "banglaName": "সাতক্ষীরা",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769552536", "01769552548"]
+      "englishName": "Satkhira",
+      "banglaName": "সাতক্ষীরা",
+      "location": {
+          "latitude": "22.7282205",
+          "longitude": "89.06465347275557"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769552536",
+          "01769552548"
+      ]
   },
   {
-    "englishName": "Rajshahi",
-    "banglaName": "রাজশাহী",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769112386", "01769112388"]
+      "englishName": "Rajshahi",
+      "banglaName": "রাজশাহী",
+      "location": {
+          "latitude": "24.3742327",
+          "longitude": "88.6097252"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769112386",
+          "01769112388"
+      ]
   },
   {
-    "englishName": "Chapainawabganj",
-    "banglaName": "চাঁপাইনবাবগঞ্জ",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769112070", "01769112372"]
+      "englishName": "Chapainawabganj",
+      "banglaName": "চাঁপাইনবাবগঞ্জ",
+      "location": {
+          "latitude": "24.6012789",
+          "longitude": "88.24371010364078"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769112070",
+          "01769112372"
+      ]
   },
   {
-    "englishName": "Pabna",
-    "banglaName": "পাবনা",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769122478", "01769112480"]
+      "englishName": "Pabna",
+      "banglaName": "পাবনা",
+      "location": {
+          "latitude": "24.0228488",
+          "longitude": "89.29332401337003"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769122478",
+          "01769112480"
+      ]
   },
   {
-    "englishName": "Sirajganj",
-    "banglaName": "সিরাজগঞ্জ",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769122462", "01769122264"]
+      "englishName": "Sirajganj",
+      "banglaName": "সিরাজগঞ্জ",
+      "location": {
+          "latitude": "24.4499588",
+          "longitude": "89.7053513"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769122462",
+          "01769122264"
+      ]
   },
   {
-    "englishName": "Natore",
-    "banglaName": "নাটোর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769112446", "01769112448"]
+      "englishName": "Natore",
+      "banglaName": "নাটোর",
+      "location": {
+          "latitude": "24.4085999",
+          "longitude": "88.9593545"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769112446",
+          "01769112448"
+      ]
   },
   {
-    "englishName": "Naogaon",
-    "banglaName": "নওগাঁ",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769122115", "01769122108"]
+      "englishName": "Naogaon",
+      "banglaName": "নওগাঁ",
+      "location": {
+          "latitude": "24.8357668",
+          "longitude": "88.9124191"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769122115",
+          "01769122108"
+      ]
   },
   {
-    "englishName": "Joypurhat",
-    "banglaName": "জয়পুরহাট",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769112634"]
+      "englishName": "Joypurhat",
+      "banglaName": "জয়পুরহাট",
+      "location": {
+          "latitude": "25.1114925",
+          "longitude": "88.9884117"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769112634"
+      ]
   },
   {
-    "englishName": "Bogra",
-    "banglaName": "বগুড়া",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769112594", "01769112170"]
+      "englishName": "Bogra",
+      "banglaName": "বগুড়া",
+      "location": {
+          "latitude": "24.85285555",
+          "longitude": "89.38865918774391"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769112594",
+          "01769112170"
+      ]
   },
   {
-    "englishName": "Rangpur",
-    "banglaName": "রংপুর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769662554", "01769662516"]
+      "englishName": "Rangpur",
+      "banglaName": "রংপুর",
+      "location": {
+          "latitude": "25.7284027",
+          "longitude": "89.2640182"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769662554",
+          "01769662516"
+      ]
   },
   {
-    "englishName": "Dinajpur",
-    "banglaName": "দিনাজপুর",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["02589921400", "02589682414"]
+      "englishName": "Dinajpur",
+      "banglaName": "দিনাজপুর",
+      "location": {
+          "latitude": "25.6249608",
+          "longitude": "88.632424"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "02589921400",
+          "02589682414"
+      ]
   },
   {
-    "englishName": "Nilphamari",
-    "banglaName": "নীলফামারী",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769682502", "01769682512"]
+      "englishName": "Nilphamari",
+      "banglaName": "নীলফামারী",
+      "location": {
+          "latitude": "25.9490764",
+          "longitude": "88.8358417"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769682502",
+          "01769682512"
+      ]
   },
   {
-    "englishName": "Lalmonirhat",
-    "banglaName": "লালমনিরহাট",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769682366", "01769682362"]
+      "englishName": "Lalmonirhat",
+      "banglaName": "লালমনিরহাট",
+      "location": {
+          "latitude": "25.911583",
+          "longitude": "89.4378013"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769682366",
+          "01769682362"
+      ]
   },
   {
-    "englishName": "Kurigram",
-    "banglaName": "কুড়িগ্রাম",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769662534", "01769662536"]
+      "englishName": "Kurigram",
+      "banglaName": "কুড়িগ্রাম",
+      "location": {
+          "latitude": "25.8130134",
+          "longitude": "89.6430518"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769662534",
+          "01769662536"
+      ]
   },
   {
-    "englishName": "Thakurgaon",
-    "banglaName": "ঠাকুরগাঁও",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769666062", "01769672616"]
+      "englishName": "Thakurgaon",
+      "banglaName": "ঠাকুরগাঁও",
+      "location": {
+          "latitude": "25.9728607",
+          "longitude": "88.51366294129332"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769666062",
+          "01769672616"
+      ]
   },
   {
-    "englishName": "Panchagarh",
-    "banglaName": "পঞ্চগড়",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01973000662", "01769662661"]
+      "englishName": "Panchagarh",
+      "banglaName": "পঞ্চগড়",
+      "location": {
+          "latitude": "26.3308827",
+          "longitude": "88.5460281"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01973000662",
+          "01769662661"
+      ]
   },
   {
-    "englishName": "Gaibandha",
-    "banglaName": "গাইবান্ধা",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01610652525", "01754585486"]
+      "englishName": "Gaibandha",
+      "banglaName": "গাইবান্ধা",
+      "location": {
+          "latitude": "25.3323091",
+          "longitude": "89.542466"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01610652525",
+          "01754585486"
+      ]
   },
   {
-    "englishName": "Sylhet",
-    "banglaName": "সিলেট",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769177268", "01987833301"]
+      "englishName": "Sylhet",
+      "banglaName": "সিলেট",
+      "location": {
+          "latitude": "24.90202515",
+          "longitude": "91.85357672746755"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769177268",
+          "01987833301"
+      ]
   },
   {
-    "englishName": "Habiganj",
-    "banglaName": "হবিগঞ্জ",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769172596", "01769172616"]
+      "englishName": "Habiganj",
+      "banglaName": "হবিগঞ্জ",
+      "location": {
+          "latitude": "24.3746027",
+          "longitude": "91.41402723390942"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769172596",
+          "01769172616"
+      ]
   },
   {
-    "englishName": "Sunamganj",
-    "banglaName": "সুনামগঞ্জ",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769172420", "01769172430"]
+      "englishName": "Sunamganj",
+      "banglaName": "সুনামগঞ্জ",
+      "location": {
+          "latitude": "25.0675424",
+          "longitude": "91.3949422"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769172420",
+          "01769172430"
+      ]
   },
   {
-    "englishName": "Moulvibazar",
-    "banglaName": "মৌলভীবাজার",
-    "location": {
-      "latitude": "",
-      "longitude": ""
-    },
-    "description": "",
-    "phoneNumbers": ["01769175680", "01769172400"]
+      "englishName": "Moulvibazar",
+      "banglaName": "মৌলভীবাজার",
+      "location": {
+          "latitude": "24.5508121",
+          "longitude": "91.7110348"
+      },
+      "description": "",
+      "phoneNumbers": [
+          "01769175680",
+          "01769172400"
+      ]
   }
 ]
