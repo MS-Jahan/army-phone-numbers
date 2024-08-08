@@ -1,16 +1,15 @@
 // App.jsx
 import React, { useState, useEffect, useMemo } from 'react';
-import { useGeolocation } from 'react-use';
 import SearchInput from './SearchInput';
 import LocationPermissionMessage from './LocationPermissionMessage';
 import PlaceCard from './PlaceCard';
-import GitHubLogo from './github-logo.svg';
 
 const App = () => {
   const [data, setData] = useState([]);
   const [searchText, setSearchText] = useState('');
   const [locationPermission, setLocationPermission] = useState(null);
-  const { latitude, longitude, error } = useGeolocation();
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
 
   useEffect(() => {
     // Fetch data from the JSON file
@@ -29,18 +28,28 @@ const App = () => {
 
 
   useEffect(() => {
-    // Update the search input field with the current location
-    if (latitude && longitude) {
-      setSearchText(`${latitude.toFixed(4)}, ${longitude.toFixed(4)}`);
+    // check location permission
+    if (navigator.geolocation) {
+        requestLocationPermission();
+    } else {
+        console.log("Geolocation is not supported by this browser.");
     }
+    
   }, [latitude, longitude]);
 
   const requestLocationPermission = () => {
     navigator.geolocation.getCurrentPosition(
-      () => setLocationPermission(true),
+      (position) => setCoords(position),
       () => setLocationPermission(false)
     );
   };
+
+  const setCoords = (position) => {
+    console.log("position :", position);
+    setLatitude(position.coords.latitude);
+    setLongitude(position.coords.longitude);
+    setSearchText(`${position.coords.latitude.toFixed(4)}, ${position.coords.longitude.toFixed(4)}`);
+  }
 
   const generateRandomNumber = () => {
     return Math.floor(Math.random() * 10000000000) + 1;
@@ -92,21 +101,13 @@ const App = () => {
     });
   }, [filteredData, searchText]);
 
-  const setCoords = (position) => {
-    console.log("position :", position);
-    latitude = position.coords.latitude;
-    longitude = position.coords.longitude;
-    setSearchText(`${latitude.toFixed(4)}, ${longitude.toFixed(4)}`);
-  }
-
   const handleLocationClick = () => {
-    // if permission granted
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(setCoords);
       console.log("permission granted");
     } else {
       requestLocationPermission();
-        console.log("permission denied");
+      console.log("permission denied");
     }
   };
 
@@ -126,10 +127,14 @@ const App = () => {
         href="https://github.com/MS-Jahan/army-phone-numbers"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4"
+        className="mt-4 absolute top-4 right-4"
       >
-        <img src="/github-logo.svg" alt="GitHub Repo" className="w-10 h-10" />
+        <img src="https://github.com/fluidicon.png" alt="GitHub Repo" className="w-10 h-10" />
       </a>
+      {/* add a footer */}
+      <footer className="mt-4 text-center">
+            <p>Built with <span style={{ color: 'red' }}>❤️</span> by the students, for the people of Bangladesh</p>
+        </footer>
     </div>
   );
 };
