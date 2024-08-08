@@ -51,7 +51,8 @@ const App = () => {
   if (!latitude || !longitude) {
     filteredData = data.filter(item =>
       item.englishName.toLowerCase().includes(searchText.toLowerCase()) ||
-      item.banglaName.toLowerCase().includes(searchText.toLowerCase())
+      item.banglaName.toLowerCase().includes(searchText.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchText.toLowerCase())
       // ||
       // (latitude && longitude && item.location.latitude.toFixed(4) === latitude.toFixed(4) && item.location.longitude.toFixed(4) === longitude.toFixed(4))
     );
