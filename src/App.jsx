@@ -3,6 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import SearchInput from './SearchInput';
 import LocationPermissionMessage from './LocationPermissionMessage';
 import PlaceCard from './PlaceCard';
+import InstallPWAModal from './InstallPWAModal';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -12,6 +13,8 @@ const App = () => {
   const [longitude, setLongitude] = useState(null);
   const [isOnline, setIsOnline] = useState(navigator.onLine);
   const [showOfflineModal, setShowOfflineModal] = useState(false);
+  const [showInstallModal, setShowInstallModal] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
 
   useEffect(() => {
     const handleOnline = () => setIsOnline(true);
@@ -70,6 +73,35 @@ const App = () => {
     
   }, [latitude, longitude]);
 
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (e) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+      setShowInstallModal(true);
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    };
+  }, []);
+
+  const handleInstall = () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the install prompt');
+        } else {
+          console.log('User dismissed the install prompt');
+        }
+        setDeferredPrompt(null);
+      });
+    }
+    setShowInstallModal(false);
+  };
+
   const requestLocationPermission = () => {
     navigator.geolocation.getCurrentPosition(
       (position) => setCoords(position),
@@ -78,7 +110,7 @@ const App = () => {
   };
 
   const setCoords = (position) => {
-    console.log("position :", position);
+    // console.log("position :", position);
     setLatitude(position.coords.latitude);
     setLongitude(position.coords.longitude);
     setSearchText(`${position.coords.latitude.toFixed(4)}, ${position.coords.longitude.toFixed(4)}`);
@@ -122,11 +154,6 @@ const App = () => {
           Math.pow(b.location.latitude - latitude, 2) +
           Math.pow(b.location.longitude - longitude, 2)
         );
-
-        console.log("name:", a.englishName);
-        console.log("distanceA", distanceA);
-        console.log("distanceB", distanceB);
-        console.log("distanceA - distanceB", distanceA - distanceB, "\n")
 
         return distanceA - distanceB;
       }
@@ -182,6 +209,11 @@ const App = () => {
           </div>
         </div>
       )}
+      <InstallPWAModal 
+        isOpen={showInstallModal}
+        onClose={() => setShowInstallModal(false)}
+        onInstall={handleInstall}
+      />
     </div>
   );
 };
