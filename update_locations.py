@@ -1,40 +1,50 @@
 import json
+import time
 import httpx as requests
 
-# Replace with your Natrium API key
-NATRIUM_API_KEY = "your_natrium_api_key_here"
-NATRIUM_API_URL = "https://api.natrium.io/v1/geocode"
-
-def get_lat_lon(location_name):
-    params = {
-        'q': location_name,
-        'api_key': NATRIUM_API_KEY,
-        'format': 'json'
-    }
-    response = requests.get(NATRIUM_API_URL, params=params)
-    if response.status_code == 200:
-        data = response.json()
-        if data and 'lat' in data and 'lon' in data:
-            return data['lat'], data['lon']
+def get_lat_lon(english_name, bangla_name):
+    # Define the base URL for the Nominatim API
+    url = f"https://nominatim.openstreetmap.org/search?format=json&q={english_name},{bangla_name},Bangladesh"
+    
+    # Send a GET request to the Nominatim API
+    response = requests.get(url)
+    
+    # Check if the request was successful
+    if response.status_code == 200 and len(response.json()) > 0:
+        data = response.json()[0]
+        return data['lat'], data['lon']
     return None, None
 
-def update_locations_with_lat_lon(json_file):
-    with open(json_file, 'r+', encoding='utf-8') as file:
+def update_locations_with_lat_lon(input_file, output_file):
+    with open(input_file, 'r', encoding='utf-8') as file:
         locations = json.load(file)
+    
+    for location in locations:
+        english_name = location['englishName']
+        bangla_name = location['banglaName']
         
-        for location in locations:
-            english_name = location.get('englishName')
-            if english_name:
-                lat, lon = get_lat_lon(english_name)
-                if lat and lon:
-                    location['location']['latitude'] = lat
-                    location['location']['longitude'] = lon
-                else:
-                    print(f"Coordinates not found for: {english_name}")
-
-        file.seek(0)
+        print(f"Fetching lat/lon for {english_name} ({bangla_name})...")
+        lat, lon = get_lat_lon(english_name, bangla_name)
+        
+        if lat and lon:
+            location['location']['latitude'] = lat
+            location['location']['longitude'] = lon
+            print(f"Success: {lat}, {lon}")
+            # save to file
+            with open(output_file, 'w', encoding='utf-8') as file:
+                json.dump(locations, file, ensure_ascii=False, indent=4)
+        else:
+            print(f"Failed to get lat/lon for {english_name} ({bangla_name})")
+        
+        # Sleep to avoid hitting the API rate limit
+        time.sleep(1)
+    
+    # Save the updated locations to a new JSON file
+    with open(output_file, 'w', encoding='utf-8') as file:
         json.dump(locations, file, ensure_ascii=False, indent=4)
-        file.truncate()
+    print(f"Updated locations saved to {output_file}")
 
 if __name__ == "__main__":
-    update_locations_with_lat_lon("locations.json")
+    input_file = 'data.json'
+    output_file = 'locations_with_lat_lon.json'
+    update_locations_with_lat_lon(input_file, output_file)
