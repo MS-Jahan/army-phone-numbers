@@ -1,11 +1,9 @@
-// App.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useGeolocation } from 'react-use';
 import SearchInput from './SearchInput';
 import LocationPermissionMessage from './LocationPermissionMessage';
 import PlaceCard from './PlaceCard';
 import GitHubLogo from './github-logo.svg'; // assuming you have a GitHub logo SVG in your project
-
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -46,32 +44,37 @@ const App = () => {
     return Math.floor(Math.random() * 10000000000) + 1;
   };
 
-  let filteredData = data;
-  console.log("lat, lon:", latitude, longitude)
-  if (!latitude || !longitude) {
-    filteredData = data.filter(item =>
+  const filteredData = useMemo(() => {
+    if (!searchText || latitude || longitude) return data;
+    return data.filter(item =>
       item.englishName.toLowerCase().includes(searchText.toLowerCase()) ||
       item.banglaName.toLowerCase().includes(searchText.toLowerCase()) ||
       item.description.toLowerCase().includes(searchText.toLowerCase())
-      // ||
-      // (latitude && longitude && item.location.latitude.toFixed(4) === latitude.toFixed(4) && item.location.longitude.toFixed(4) === longitude.toFixed(4))
     );
-  }
+  }, [searchText, data]);
 
-  const sortedData = filteredData.sort((a, b) => {
-    if (latitude && longitude) {
-      const distanceA = Math.sqrt(
-        Math.pow(a.location.latitude - latitude, 2) +
-        Math.pow(a.location.longitude - longitude, 2)
-      );
-      const distanceB = Math.sqrt(
-        Math.pow(b.location.latitude - latitude, 2) +
-        Math.pow(b.location.longitude - longitude, 2)
-      );
-      return distanceA - distanceB;
-    }
-    return 0;
-  });
+  const sortedData = useMemo(() => {
+    return filteredData.sort((a, b) => {
+      if (latitude && longitude) {
+        const distanceA = Math.sqrt(
+          Math.pow(a.location.latitude - latitude, 2) +
+          Math.pow(a.location.longitude - longitude, 2)
+        );
+        const distanceB = Math.sqrt(
+          Math.pow(b.location.latitude - latitude, 2) +
+          Math.pow(b.location.longitude - longitude, 2)
+        );
+
+        console.log("name:", a.englishName);
+        console.log("distanceA", distanceA);
+        console.log("distanceB", distanceB);
+        console.log("distanceA - distanceB", distanceA - distanceB, "\n")
+
+        return distanceA - distanceB;
+      }
+      return 0;
+    });
+  }, [filteredData, latitude, longitude]);
 
   return (
     <div className="relative flex flex-col items-center container mx-auto py-20 px-5">
@@ -87,7 +90,7 @@ const App = () => {
       </div>
       {/* Add GitHub logo with absolute positioning */}
       <a
-        href="https://github.com/your-username/your-repo"
+        href="https://github.com/MS-Jahan/army-phone-numbers"
         target="_blank"
         rel="noopener noreferrer"
         className="absolute top-4 right-4"
