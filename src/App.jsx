@@ -27,6 +27,7 @@ const App = () => {
     );
   }, []);
 
+
   useEffect(() => {
     // Update the search input field with the current location
     if (latitude && longitude) {
@@ -45,7 +46,20 @@ const App = () => {
     return Math.floor(Math.random() * 10000000000) + 1;
   };
 
+  const getLatLongFromSearchText = (searchText) => {
+    const latLongRegex = /(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)/;
+    const match = searchText.match(latLongRegex);
+    if (match) {
+      return {
+        latitude: parseFloat(match[1]),
+        longitude: parseFloat(match[2])
+      };
+    }
+    return { latitude: null, longitude: null };
+  };
+
   const filteredData = useMemo(() => {
+    const { latitude, longitude } = getLatLongFromSearchText(searchText);
     if (!searchText || latitude || longitude) return data;
     return data.filter(item =>
       item.englishName.toLowerCase().includes(searchText.toLowerCase()) ||
@@ -55,8 +69,9 @@ const App = () => {
   }, [searchText, data]);
 
   const sortedData = useMemo(() => {
+    const { latitude, longitude } = getLatLongFromSearchText(searchText);
     return filteredData.sort((a, b) => {
-      if (latitude && longitude) {
+      if (latitude !== null && longitude !== null) {
         const distanceA = Math.sqrt(
           Math.pow(a.location.latitude - latitude, 2) +
           Math.pow(a.location.longitude - longitude, 2)
@@ -75,13 +90,23 @@ const App = () => {
       }
       return a.englishName.localeCompare(b.englishName);
     });
-  }, [filteredData, latitude, longitude]);
+  }, [filteredData, searchText]);
+
+  const setCoords = (position) => {
+    console.log("position :", position);
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
+    setSearchText(`${latitude.toFixed(4)}, ${longitude.toFixed(4)}`);
+  }
 
   const handleLocationClick = () => {
-    if (latitude && longitude) {
-      setSearchText(`${latitude.toFixed(4)}, ${longitude.toFixed(4)}`);
+    // if permission granted
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(setCoords);
+      console.log("permission granted");
     } else {
       requestLocationPermission();
+        console.log("permission denied");
     }
   };
 
