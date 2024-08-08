@@ -10,13 +10,46 @@ const App = () => {
   const [locationPermission, setLocationPermission] = useState(null);
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const [showOfflineModal, setShowOfflineModal] = useState(false);
 
   useEffect(() => {
-    // Fetch data from the JSON file
-    fetch('/data.json')
-      .then(response => response.json())
-      .then(data => setData(data));
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
   }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      let storedData = localStorage.getItem('armyData');
+      
+      if (storedData) {
+        setData(JSON.parse(storedData));
+      }
+
+      if (isOnline) {
+        try {
+          const response = await fetch('/data.json');
+          const fetchedData = await response.json();
+          setData(fetchedData);
+          localStorage.setItem('armyData', JSON.stringify(fetchedData));
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      } else if (!storedData) {
+        setShowOfflineModal(true);
+      }
+    };
+
+    fetchData();
+  }, [isOnline]);
 
   useEffect(() => {
     // Check location permission on component mount
@@ -131,10 +164,24 @@ const App = () => {
       >
         <img src="https://github.com/fluidicon.png" alt="GitHub Repo" className="w-10 h-10" />
       </a>
-      {/* add a footer */}
       <footer className="mt-4 text-center">
-            <p>Built with <span style={{ color: 'red' }}>❤️</span> by the students, for the people of Bangladesh</p>
-        </footer>
+        <p>Built with <span style={{ color: 'red' }}>❤️</span> by the students, for the people of Bangladesh</p>
+      </footer>
+      
+      {showOfflineModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg">
+            <h2 className="text-xl font-bold mb-4">No Internet Connection</h2>
+            <p>Please connect to the internet to load the data.</p>
+            <button 
+              className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
+              onClick={() => setShowOfflineModal(false)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
