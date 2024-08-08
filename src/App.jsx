@@ -1,9 +1,10 @@
+// App.jsx
 import React, { useState, useEffect, useMemo } from 'react';
 import { useGeolocation } from 'react-use';
 import SearchInput from './SearchInput';
 import LocationPermissionMessage from './LocationPermissionMessage';
 import PlaceCard from './PlaceCard';
-import GitHubLogo from './github-logo.svg'; // assuming you have a GitHub logo SVG in your project
+import GitHubLogo from './github-logo.svg';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -72,16 +73,23 @@ const App = () => {
 
         return distanceA - distanceB;
       }
-      return 0;
-      
+      return a.englishName.localeCompare(b.englishName);
     });
   }, [filteredData, latitude, longitude]);
 
+  const handleLocationClick = () => {
+    if (latitude && longitude) {
+      setSearchText(`${latitude.toFixed(4)}, ${longitude.toFixed(4)}`);
+    } else {
+      requestLocationPermission();
+    }
+  };
+
   return (
-    <div className="relative flex flex-col items-center container mx-auto py-20 px-5">
+    <div className="flex flex-col items-center container mx-auto py-20 px-5">
       <h1 className="text-3xl font-bold mb-4 text-center">সেনাবাহিনীর ক্যাম্পসমূহের সাথে যোগাযোগের নম্বর</h1>
       <div className="w-full max-w-md">
-        <SearchInput searchText={searchText} setSearchText={setSearchText} />
+        <SearchInput searchText={searchText} setSearchText={setSearchText} handleLocationClick={handleLocationClick} />
       </div>
       <LocationPermissionMessage locationPermission={locationPermission} requestLocationPermission={requestLocationPermission} />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
@@ -89,12 +97,11 @@ const App = () => {
           <PlaceCard key={place.englishName + generateRandomNumber()} place={place} />
         ))}
       </div>
-      {/* Add GitHub logo with absolute positioning */}
       <a
         href="https://github.com/MS-Jahan/army-phone-numbers"
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute top-4 right-4"
+        className="mt-4"
       >
         <img src="/github-logo.svg" alt="GitHub Repo" className="w-10 h-10" />
       </a>
