@@ -456,5 +456,5 @@
     }
   ],
   "description": "সেনাবাহিনীর ক্যাম্প সমূহের সাথে যোগাযোগের নম্বর সমূহ",
-  "scope": "https://army-phone-numbers.vercel.app/"
+  "scope": "/"
 }
