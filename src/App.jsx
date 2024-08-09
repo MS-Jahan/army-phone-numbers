@@ -77,7 +77,9 @@ const App = () => {
     const handleBeforeInstallPrompt = (e) => {
       e.preventDefault();
       setDeferredPrompt(e);
-      setShowInstallModal(true);
+      setTimeout(() => {
+        setShowInstallModal(true);
+      }, 5000);
     };
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
