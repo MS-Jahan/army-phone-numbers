@@ -63,15 +63,15 @@ const App = () => {
   }, []);
 
 
-  useEffect(() => {
-    // check location permission
-    if (navigator.geolocation) {
-        requestLocationPermission();
-    } else {
-        console.log("Geolocation is not supported by this browser.");
-    }
+  // useEffect(() => {
+  //   // check location permission
+  //   if (navigator.geolocation) {
+  //       requestLocationPermission();
+  //   } else {
+  //       console.log("Geolocation is not supported by this browser.");
+  //   }
     
-  }, [latitude, longitude]);
+  // }, [latitude, longitude]);
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (e) => {
