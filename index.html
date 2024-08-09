@@ -1,19 +1,28 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/manifest.json" />
-    <title>সেনাপ্রহরী</title>
-  </head>
-  <body>
-    <div id="root" style="width: 100%;"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-  <script>
-    if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('/pwabuilder-sw.js')
-    }
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="/manifest.json" />
+  <title>সেনাপ্রহরী</title>
+</head>
+
+<body>
+  <script type="module">
+    import '/pwaupdate.js';
+
+    const el = document.createElement('pwa-update');
+    document.body.appendChild(el);
   </script>
+  <div id="root" style="width: 100%;"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+<script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('/pwabuilder-sw.js')
+  }
+</script>
+
 </html>
