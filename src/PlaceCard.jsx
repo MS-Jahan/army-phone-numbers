@@ -10,7 +10,7 @@ const PlaceCard = ({ place }) => {
         {place.phoneNumbers.map((number, index) => (
           <span className='' key={index}>
             {/* {number} */}
-            <a href='tel:${number}' className='text-blue-500 hover:underline'>{number}</a>{index < place.phoneNumbers.length - 1 ? ', ' : ''}
+            <a href={'tel:' + number} className='text-blue-500 hover:underline'>{number}</a>{index < place.phoneNumbers.length - 1 ? ', ' : ''}
           </span>
         ))}
       </p>

@@ -8,7 +8,7 @@ import InstallPWAModal from './InstallPWAModal';
 const App = () => {
   const [data, setData] = useState([]);
   const [searchText, setSearchText] = useState('');
-  const [locationPermission, setLocationPermission] = useState(null);
+  const [locationPermission, setLocationPermission] = useState(false);
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
   const [isOnline, setIsOnline] = useState(navigator.onLine);
@@ -54,24 +54,24 @@ const App = () => {
     fetchData();
   }, [isOnline]);
 
-  useEffect(() => {
-    // Check location permission on component mount
-    navigator.geolocation.getCurrentPosition(
-      () => setLocationPermission(true),
-      () => setLocationPermission(false)
-    );
-  }, []);
-
-
   // useEffect(() => {
-  //   // check location permission
-  //   if (navigator.geolocation) {
-  //       requestLocationPermission();
-  //   } else {
-  //       console.log("Geolocation is not supported by this browser.");
-  //   }
+  //   // Check location permission on component mount
+  //   navigator.geolocation.getCurrentPosition(
+  //     () => setLocationPermission(true),
+  //     () => setLocationPermission(false)
+  //   );
+  // }, []);
+
+
+  useEffect(() => {
+    // check location permission
+    if (navigator.geolocation) {
+        requestLocationPermission();
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
     
-  // }, [latitude, longitude]);
+  }, [latitude, longitude]);
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (e) => {
@@ -105,10 +105,31 @@ const App = () => {
   };
 
   const requestLocationPermission = () => {
-    navigator.geolocation.getCurrentPosition(
-      (position) => setCoords(position),
-      () => setLocationPermission(false)
-    );
+    // check if the browser supports geolocation
+    if (navigator.geolocation) {
+      navigator.permissions.query({ name: 'geolocation' }).then((result) => {
+        if (result.state === 'granted') {
+          setLocationPermission(true);
+          navigator.geolocation.getCurrentPosition(setCoords);
+        } else if (result.state === 'prompt') {
+          setLocationPermission(false);
+        } else if (result.state === 'denied') {
+          setLocationPermission(false);
+        }
+        result.onchange = () => {
+          if (result.state === 'granted') {
+            setLocationPermission(true);
+            navigator.geolocation.getCurrentPosition(setCoords);
+          } else if (result.state === 'prompt') {
+            setLocationPermission(false);
+          } else if (result.state === 'denied') {
+            setLocationPermission(false);
+          }
+        };
+      });
+    } else {
+      setLocationPermission(false);
+    }
   };
 
   const setCoords = (position) => {
