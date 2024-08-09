@@ -10,17 +10,10 @@ self.addEventListener("message", (event) => {
   }
 });
 
-// Cache HTML, CSS, JavaScript, and PNG files
+// Cache first
 workbox.routing.registerRoute(
-  ({ request }) => {
-    return (
-      request.destination === 'document' ||
-      request.destination === 'style' ||
-      request.destination === 'script' ||
-      request.destination === 'image'
-    ) && request.url.match(/\.(html|css|js|png)$/i);
-  },
-  new workbox.strategies.StaleWhileRevalidate({
+  new RegExp('/*'),
+  new workbox.strategies.CacheFirst({
     cacheName: CACHE
   })
 );
