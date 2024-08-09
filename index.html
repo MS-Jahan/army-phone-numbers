@@ -10,19 +10,31 @@
 </head>
 
 <body>
-  <script type="module">
-    import '/pwaupdate.js?url';
-
-    const el = document.createElement('pwa-update');
-    document.body.appendChild(el);
-  </script>
   <div id="root" style="width: 100%;"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 <script>
-  if (typeof navigator.serviceWorker !== 'undefined') {
-    navigator.serviceWorker.register('/pwabuilder-sw.js')
+  if ("serviceWorker" in navigator) {
+    if (navigator.serviceWorker.controller) {
+      console.log("An active service worker found, no need to register");
+    } else {
+      // Register the service worker
+      navigator.serviceWorker
+        .register("/pwabuilder-sw.js", {
+          scope: "/"
+        })
+        .then(function (reg) {
+          console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
   }
+</script>
+
+<script type="module">
+  import '/pwaupdate.js?url';
+
+  const el = document.createElement('pwa-update');
+  document.body.appendChild(el);
 </script>
 
 <script>
