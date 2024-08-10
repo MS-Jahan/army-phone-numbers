@@ -31,10 +31,14 @@
 </script>
 
 <script type="module">
-  import '/pwaupdate.js?url';
-
-  const el = document.createElement('pwa-update');
-  document.body.appendChild(el);
+  try {
+    import '/pwaupdate.js?url';
+  
+    const el = document.createElement('pwa-update');
+    document.body.appendChild(el);
+  } catch(e) {
+    console.log(e);
+  }
 </script>
 
 <!-- <script>
