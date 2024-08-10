@@ -33,17 +33,27 @@
 <script type="module">
   (async () => {
     try {
-      // Dynamic import returns a promise
-      const module = await import('/pwaupdate.js?url');
-      
-      // Assuming '/pwaupdate.js?url' exports something you need to use
-      const el = document.createElement('pwa-update');
-      document.body.appendChild(el);
+      // Check for navigator.permissions.query() availability
+      if ('permissions' in navigator && typeof navigator.permissions.query === 'function') {
+        const permissionStatus = await navigator.permissions.query({ name: 'geolocation' });
+        console.log('Geolocation permission status is:', permissionStatus.state);
+        // Handle the permission status if needed
+        // Now that the environment is confirmed to have the required features, proceed with the import
+        const module = await import('/pwaupdate.js?url');
+        
+        // Create and append the custom element
+        const el = document.createElement('pwa-update');
+          document.body.appendChild(el);
+        } else {
+          console.warn('navigator.permissions.query() is not available in this environment.');
+          // Fallback or alternative code
+        }
     } catch (e) {
-      console.error('Failed to load module:', e);
+      console.error('An error occurred:', e);
     }
   })();
 </script>
+
 
 
 
