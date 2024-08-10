@@ -31,17 +31,20 @@
 </script>
 
 <script type="module">
-  try {
-    // Dynamic import returns a promise
-    const module = await import('/pwaupdate.js?url');
-    
-    // Assuming '/pwaupdate.js?url' exports something you need to use
-    const el = document.createElement('pwa-update');
-    document.body.appendChild(el);
-  } catch (e) {
-    console.error('Failed to load module:', e);
-  }
+  (async () => {
+    try {
+      // Dynamic import returns a promise
+      const module = await import('/pwaupdate.js?url');
+      
+      // Assuming '/pwaupdate.js?url' exports something you need to use
+      const el = document.createElement('pwa-update');
+      document.body.appendChild(el);
+    } catch (e) {
+      console.error('Failed to load module:', e);
+    }
+  })();
 </script>
+
 
 
 <!-- <script>
