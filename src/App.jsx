@@ -106,17 +106,9 @@ const App = () => {
 
   const requestLocationPermission = () => {
     // check if the browser supports geolocation
-    if (navigator.geolocation) {
-      navigator.permissions.query({ name: 'geolocation' }).then((result) => {
-        if (result.state === 'granted') {
-          setLocationPermission(true);
-          navigator.geolocation.getCurrentPosition(setCoords);
-        } else if (result.state === 'prompt') {
-          setLocationPermission(false);
-        } else if (result.state === 'denied') {
-          setLocationPermission(false);
-        }
-        result.onchange = () => {
+    if ('permissions' in navigator && typeof navigator.permissions.query === 'function') {
+      if (navigator.geolocation) {
+        navigator.permissions.query({ name: 'geolocation' }).then((result) => {
           if (result.state === 'granted') {
             setLocationPermission(true);
             navigator.geolocation.getCurrentPosition(setCoords);
@@ -125,10 +117,22 @@ const App = () => {
           } else if (result.state === 'denied') {
             setLocationPermission(false);
           }
-        };
-      });
+          result.onchange = () => {
+            if (result.state === 'granted') {
+              setLocationPermission(true);
+              navigator.geolocation.getCurrentPosition(setCoords);
+            } else if (result.state === 'prompt') {
+              setLocationPermission(false);
+            } else if (result.state === 'denied') {
+              setLocationPermission(false);
+            }
+          };
+        });
+      } else {
+        setLocationPermission(false);
+      }
     } else {
-      setLocationPermission(false);
+      alert("Location permission not available. Please open the url on a modern browser for better compatibility and offline usage!")
     }
   };
 
