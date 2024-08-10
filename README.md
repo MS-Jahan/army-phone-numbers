@@ -46,7 +46,7 @@ Ensure you have the following installed on your machine:
     
 2.  **Install dependencies**:
     
- npm install
+ `npm install`
     
 
 ### Running the Application
