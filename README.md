@@ -40,9 +40,9 @@ Ensure you have the following installed on your machine:
 
 1.  **Clone the repository**:
     
- git clone https://github.com/MS-Jahan/army-phone-numbers.git
+ `git clone https://github.com/MS-Jahan/army-phone-numbers.git`
     
- cd army-phone-numbers
+ `cd army-phone-numbers`
     
 2.  **Install dependencies**:
     
@@ -53,22 +53,22 @@ Ensure you have the following installed on your machine:
 
 1.  **Start the development server**:
     
- npm run dev
+ `npm run dev`
     
 2.  **Build the production application**:
     
- npm run build
+ `npm run build`
     
 3.  **Preview the production build**:
     
- npm run preview
+ `npm run preview`
     
 
 ### Linting
 
 To run ESLint and check for code quality issues, use the following command:
 
-npm run lint
+`npm run lint`
 
 ## Usage
 
