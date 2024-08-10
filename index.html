@@ -32,14 +32,17 @@
 
 <script type="module">
   try {
-    import '/pwaupdate.js?url';
-  
+    // Dynamic import returns a promise
+    const module = await import('/pwaupdate.js?url');
+    
+    // Assuming '/pwaupdate.js?url' exports something you need to use
     const el = document.createElement('pwa-update');
     document.body.appendChild(el);
-  } catch(e) {
-    console.log(e);
+  } catch (e) {
+    console.error('Failed to load module:', e);
   }
 </script>
+
 
 <!-- <script>
   window.replainSettings = { id: 'cb3ce02a-b6ef-46db-9ed9-64da41250262' };
